@@ -53,40 +53,49 @@
         line-height: 50px;
       }
 
+      button {
+        background-color: white;
+      }
+
       /* Text 1 */
 
       .cp1 {
-        animation: clipOut1 10s ease-in-out infinite forwards;
+        animation: clipOut1 15s cubic-bezier(0, 0, 0, 0.75) infinite forwards;
       }
 
       @keyframes clipOut1 {
         /* 1 Stays Put */
 
         0% {
+          opacity: 0;
           transform: translateY(60px);
         }
 
         /* 1 Arrives */
 
-        8% {
+        3.3% {
+          opacity: 1;
           transform: translateY(0px);
         }
 
         /* 1 Stays */
 
-        8%,
-        24% {
+        3.3%,
+        29.7% {
+          opacity: 1;
           transform: translateY(0px);
         }
 
         /* 1 Gone */
 
-        32% {
+        33% {
+          opacity: 0;
           transform: translateY(-60px);
         }
 
-        32%,
+        33%,
         100% {
+          opacity: 0;
           transform: translateY(-60px);
         }
       }
@@ -94,38 +103,43 @@
       /* Text 2 */
 
       .cp2 {
-        animation: clipOut2 10s ease-in-out infinite forwards;
+        animation: clipOut2 15s cubic-bezier(0, 0, 0, 0.75) infinite forwards;
       }
 
       @keyframes clipOut2 {
         /* 2 Stays Put */
 
         0%,
-        32% {
+        33% {
+          opacity: 0;
           transform: translateY(60px);
         }
 
         /* 2 Arrives */
 
-        40% {
+        36.9% {
+          opacity: 1;
           transform: translateY(0px);
         }
 
         /* 2 Stays */
 
-        40%,
-        56% {
+        36.9%,
+        62.7% {
+          opacity: 1;
           transform: translateY(0px);
         }
 
         /* 2 Gone */
 
-        64% {
+        66% {
+          opacity: 0;
           transform: translateY(-60px);
         }
 
-        64%,
+        66%,
         100% {
+          opacity: 0;
           transform: translateY(-60px);
         }
       }
@@ -133,38 +147,43 @@
       /* Text 3 */
 
       .cp3 {
-        animation: clipOut3 10s ease-in-out infinite forwards;
+        animation: clipOut3 15s cubic-bezier(0, 0, 0, 0.75) infinite forwards;
       }
 
       @keyframes clipOut3 {
         /* 3 Stays Put */
 
         0%,
-        64% {
+        66% {
+          opacity: 0;
           transform: translateY(60px);
         }
 
         /* 3 Arrives */
 
-        72% {
+        69.3% {
+          opacity: 1;
           transform: translateY(0px);
         }
 
         /* 3 Stays */
 
-        72%,
-        88% {
+        69.3%,
+        95.7% {
+          opacity: 1;
           transform: translateY(0px);
         }
 
         /* 3 Gone */
 
-        96% {
+        99% {
+          opacity: 0;
           transform: translateY(-60px);
         }
 
-        96%,
+        99%,
         100% {
+          opacity: 0;
           transform: translateY(-60px);
         }
       }
