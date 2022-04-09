@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Text Slide In Animation - Slide In Out</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .parentDiv {
+        background-color: lightcoral;
+        padding: 30px;
+        min-height: 100vh;
+      }
+
+      .slidingLeach {
+        position: relative;
+        height: 50px;
+        width: auto;
+        margin: 15px 0px;
+      }
+
+      .marker {
+        position: relative;
+        height: 50px;
+        overflow: hidden;
+      }
+
+      .bannerTitle {
+        text-transform: uppercase;
+        font-family: "Montserrat", sans-serif;
+        font-size: clamp(35px, 5vw, 60px);
+        letter-spacing: 1px;
+        font-weight: 700;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .slidingLeach .bannerTitle {
+        line-height: 50px;
+      }
+
+      /* Text 1 */
+
+      .cp1 {
+        animation: clipOut1 10s ease-in-out infinite forwards;
+      }
+
+      @keyframes clipOut1 {
+        /* 1 Stays Put */
+
+        0% {
+          transform: translateY(60px);
+        }
+
+        /* 1 Arrives */
+
+        8% {
+          transform: translateY(0px);
+        }
+
+        /* 1 Stays */
+
+        8%,
+        24% {
+          transform: translateY(0px);
+        }
+
+        /* 1 Gone */
+
+        32% {
+          transform: translateY(-60px);
+        }
+
+        32%,
+        100% {
+          transform: translateY(-60px);
+        }
+      }
+
+      /* Text 2 */
+
+      .cp2 {
+        animation: clipOut2 10s ease-in-out infinite forwards;
+      }
+
+      @keyframes clipOut2 {
+        /* 2 Stays Put */
+
+        0%,
+        32% {
+          transform: translateY(60px);
+        }
+
+        /* 2 Arrives */
+
+        40% {
+          transform: translateY(0px);
+        }
+
+        /* 2 Stays */
+
+        40%,
+        56% {
+          transform: translateY(0px);
+        }
+
+        /* 2 Gone */
+
+        64% {
+          transform: translateY(-60px);
+        }
+
+        64%,
+        100% {
+          transform: translateY(-60px);
+        }
+      }
+
+      /* Text 3 */
+
+      .cp3 {
+        animation: clipOut3 10s ease-in-out infinite forwards;
+      }
+
+      @keyframes clipOut3 {
+        /* 3 Stays Put */
+
+        0%,
+        64% {
+          transform: translateY(60px);
+        }
+
+        /* 3 Arrives */
+
+        72% {
+          transform: translateY(0px);
+        }
+
+        /* 3 Stays */
+
+        72%,
+        88% {
+          transform: translateY(0px);
+        }
+
+        /* 3 Gone */
+
+        96% {
+          transform: translateY(-60px);
+        }
+
+        96%,
+        100% {
+          transform: translateY(-60px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parentDiv">
+      <div class="slidingLeach">
+        <div class="marker">
+          <h3 class="bannerTitle cp1">World</h3>
+          <h3 class="bannerTitle cp2">Enterprise</h3>
+          <h3 class="bannerTitle cp3">Budget</h3>
+        </div>
+      </div>
+
+      <div class="slidingLeach">
+        <div class="marker">
+          <h3 class="bannerTitle cp1">Titan</h3>
+          <h3 class="bannerTitle cp2">Raid</h3>
+          <h3 class="bannerTitle cp3">Rumble</h3>
+        </div>
+      </div>
+
+      <div class="slidingLeach">
+        <div class="marker">
+          <button class="bannerTitle cp1">Alliance</button>
+          <button class="bannerTitle cp2">Save</button>
+          <button class="bannerTitle cp3">World</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
